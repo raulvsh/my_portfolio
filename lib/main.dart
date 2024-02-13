@@ -128,6 +128,7 @@ class _CryptoListState extends State<CryptoList> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 6.0, horizontal: 8.0),
                 child: Card(
+                  elevation: 10,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 6.0),
                     child: ListTile(
@@ -167,7 +168,7 @@ class _CryptoListState extends State<CryptoList> {
           );
         },
       ),
-      
+
       bottomSheet:Text('Total en shitcoins: \$${total.toStringAsFixed(2)}') ,
     );
   }
