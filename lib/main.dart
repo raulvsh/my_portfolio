@@ -36,7 +36,7 @@ class _CryptoListState extends State<CryptoList> {
     0.005330,
     0.0000000000560,
     0.00001367,
-    //0.00000564, precio prueba
+    //0.00000564, //precio prueba
     0.0004880,
     0.00001040,
     0.0001389,
@@ -55,16 +55,16 @@ class _CryptoListState extends State<CryptoList> {
     3088.195702,
   ];
 
-  /* Cantidades públicas
-  final List<double> cantidades = [
-    0.598233191,
-    102567507,
-    110.235613,
-    14.4226184,
-    164.548236,
-    16.51689,
-    6.62883463,
-    30.195702,
+  // Cantidades públicas
+  /*final List<double> cantidades = [
+    0.298233191,
+    52567507,
+    70.235613,
+    11.4226184,
+    120.548236,
+    11.51689,
+    3.62883463,
+    10.195702,
   ];*/
 
   @override
@@ -221,7 +221,7 @@ class _CryptoListState extends State<CryptoList> {
                 ),
               ),
               const Divider(
-                color: Colors.black,
+                color: Colors.black87,
               )
             ],
           );
