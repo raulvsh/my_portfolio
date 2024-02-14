@@ -42,7 +42,7 @@ class _CryptoListState extends State<CryptoList> {
     0.0002114,
     0.00000599
   ];
-  final List<double> cantidades = [
+  /*final List<double> cantidades = [
     5.98233191,
     1002567507,
     1102.235613,
@@ -51,12 +51,23 @@ class _CryptoListState extends State<CryptoList> {
     164.51689,
     68.62883463,
     3088.195702,
+  ];*/
+
+  final List<double> cantidades = [
+    0.598233191,
+    102567507,
+    110.235613,
+    14.4226184,
+    164.548236,
+    16.51689,
+    6.62883463,
+    30.195702,
   ];
 
   @override
   void initState() {
     super.initState();
-        fetchBitcoinPrice();
+    fetchBitcoinPrice();
 
     fetchData();
   }
@@ -72,10 +83,10 @@ class _CryptoListState extends State<CryptoList> {
       List<Crypto> fetchedCryptos =
           data.map((crypto) => Crypto.fromJson(crypto)).toList();
       for (var i = 0; i < fetchedCryptos.length; i++) {
-        print("shitcoin " + fetchedCryptos[i].symbol.toString());
-        print("precio de compra " + preciosCompra[i].toString());
-        print("cantidades " + cantidades[i].toString());
-        total+=fetchedCryptos[i].price * cantidades[i] * bitcoinPrice;
+        //print("shitcoin " + fetchedCryptos[i].symbol.toString());
+        //print("precio de compra " + preciosCompra[i].toString());
+        //print("cantidades " + cantidades[i].toString());
+        total += fetchedCryptos[i].price * cantidades[i] * bitcoinPrice;
       }
 
       setState(() {
@@ -115,8 +126,11 @@ class _CryptoListState extends State<CryptoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mis shitcoins'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Center(
+            child: Text(
+          'Mis shitcoins',
+        )),
+        //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       //body: Text('holaasda'),
       body: ListView.builder(
@@ -126,50 +140,56 @@ class _CryptoListState extends State<CryptoList> {
             children: [
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 6.0, horizontal: 8.0),
-                child: Card(
-                  elevation: 10,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6.0),
-                    child: ListTile(
-                      //padding: const EdgeInsets.all(8.0),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                              flex: 2,
-                              child: Text(
-                                cryptos[index].name,
-                              )),
-                          //subtitle: Text('${cryptos[index].symbol} - ${cryptos[index].name} - B${cryptos[index].price}' ),
+                    const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
+                child: ListTile(
+                  //padding: const EdgeInsets.all(8.0),
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                          flex: 2,
+                          child: Row(
+                            children: [
+                              //Image.asset('./assets/img/${index}.png',                                  height: 30),
+                              Image.asset('./assets/img/$index.png',
+                                  height: 30),
+                              Flexible(
+                                child: Text(
+                                  '   ${cryptos[index].name} ',overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 13),
+                                ),
+                              ),
+                            ],
+                          )),
+                      //subtitle: Text('${cryptos[index].symbol} - ${cryptos[index].name} - B${cryptos[index].price}' ),
 
-                          Expanded(
-                              flex: 2,
-                              child: Text('B${cryptos[index].price}',
-                                  textAlign: TextAlign.left)),
+                      Expanded(
+                          flex: 2,
+                          child: Text('B${cryptos[index].price.toStringAsFixed(8)}',style: const TextStyle(fontSize: 13),
+                              textAlign: TextAlign.left)),
 
-                          Expanded(
-                            flex: 1,
-                            child: Text(
-                                '${((cryptos[index].price / preciosCompra[index] - 1) * 100).toStringAsFixed(2)}%'),
-                          ),
-
-                          Expanded(
-                              flex: 1,
-                              child: Text(
-                                  '\$${(cryptos[index].price * cantidades[index] * bitcoinPrice).toStringAsFixed(2)}'))
-                        ],
+                      Expanded(
+                        flex: 1,
+                        child: Text(
+                            '${((cryptos[index].price / preciosCompra[index] - 1) * 100).toStringAsFixed(2)}%', style: const TextStyle(fontSize: 13),)
                       ),
-                    ),
+
+                      Expanded(
+                          flex: 1,
+                          child: Text(
+                              '\$${(cryptos[index].price * cantidades[index] * bitcoinPrice).toStringAsFixed(2)}', style: const TextStyle(fontSize: 13),))
+                    ],
                   ),
                 ),
               ),
+              const Divider(
+                color: Colors.black,
+              )
             ],
           );
         },
       ),
 
-      bottomSheet:Text('Total en shitcoins: \$${total.toStringAsFixed(2)}') ,
+      bottomSheet: Text('Total en shitcoins: \$${total.toStringAsFixed(2)}'),
     );
   }
 }
