@@ -36,13 +36,15 @@ class _CryptoListState extends State<CryptoList> {
     0.005330,
     0.0000000000560,
     0.00001367,
+    //0.00000564, precio prueba
     0.0004880,
     0.00001040,
     0.0001389,
     0.0002114,
     0.00000599
   ];
-  /*final List<double> cantidades = [
+  // Cantidades privadas
+  final List<double> cantidades = [
     5.98233191,
     1002567507,
     1102.235613,
@@ -51,8 +53,9 @@ class _CryptoListState extends State<CryptoList> {
     164.51689,
     68.62883463,
     3088.195702,
-  ];*/
+  ];
 
+  /* Cantidades públicas
   final List<double> cantidades = [
     0.598233191,
     102567507,
@@ -62,7 +65,7 @@ class _CryptoListState extends State<CryptoList> {
     16.51689,
     6.62883463,
     30.195702,
-  ];
+  ];*/
 
   @override
   void initState() {
@@ -106,13 +109,13 @@ class _CryptoListState extends State<CryptoList> {
 
       List<Crypto> fetchedBTC =
           data.map((crypto) => Crypto.fromJson(crypto)).toList();
-      for (var i = 0; i < fetchedBTC.length; i++) {
-        print("bitcoin1 " +
+      /*for (var i = 0; i < fetchedBTC.length; i++) {
+        print("Bitcoin ");
+        print(
             fetchedBTC[i].symbol.toString() +
             fetchedBTC[i].price.toString());
-        //print("precio de compra " + preciosCompra[i].toString());
-        // print("cantidades " + cantidades[i].toString());
-      }
+        
+      }*/
 
       setState(() {
         bitcoinPrice = fetchedBTC[0].price;
@@ -129,21 +132,57 @@ class _CryptoListState extends State<CryptoList> {
         title: const Center(
             child: Text(
           'Mis shitcoins',
+          style: TextStyle(color: Colors.white),
         )),
-        //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.black87,//.of(context).colorScheme.inversePrimary,
       ),
-      //body: Text('holaasda'),
       body: ListView.builder(
+        
         itemCount: cryptos.length,
         itemBuilder: (context, index) {
+
+          double percentage = 0.0;
+          percentage = (cryptos[index].price / preciosCompra[index] - 1) * 100;
+          
           return Column(
             children: [
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
                 child: ListTile(
+                  dense: true,
+                  leading: Image.asset('./assets/img/$index.png',
+                      height: 30), //Icon(Icons.settings),
                   //padding: const EdgeInsets.all(8.0),
-                  title: Row(
+                  title: Text(
+                    '${cryptos[index].name} ',
+                    //overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 15),
+                  ),
+                  subtitle: //Row(children: [
+                      Text(
+                          '${cantidades[index]}  |  B${cryptos[index].price.toStringAsFixed(8)}'),
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      //Text((cryptos[index].price * cantidades[index] * bitcoinPrice).toStringAsFixed(2)),
+                      Text(
+                        '\$${(cryptos[index].price * cantidades[index] * bitcoinPrice).toStringAsFixed(2)}',
+                      ),
+                      Text(
+                          '${percentage.toStringAsFixed(2)}%',
+                          //'hola',
+                          //style: const TextStyle(fontSize: 13),
+                          //style: const TextStyle(color: percentage.index <=0?Colors.red:Colors.green),
+                          style: TextStyle(color: percentage<0?Colors.red:Colors.green),
+                          ),
+                          //TextStyle()
+                    ],
+                  ),
+
+                  //],),
+
+                  /*Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
@@ -178,7 +217,7 @@ class _CryptoListState extends State<CryptoList> {
                           child: Text(
                               '\$${(cryptos[index].price * cantidades[index] * bitcoinPrice).toStringAsFixed(2)}', style: const TextStyle(fontSize: 13),))
                     ],
-                  ),
+                  ),*/
                 ),
               ),
               const Divider(
