@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/home_page.dart';
 
 class TotalValue extends StatelessWidget {
   const TotalValue({
