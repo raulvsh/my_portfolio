@@ -33,7 +33,7 @@ class TotalValue extends StatelessWidget {
                   'Valor en Bitcoin: ${(total / bitcoinPrice).toStringAsFixed(8)}',
                   style: textStyleFont18),
               Text(
-                'Precio de Bitcoin: $bitcoinPrice',
+                'Precio de Bitcoin: ${(bitcoinPrice).toStringAsFixed(0)}',
                 style: textStyleFont18,
               )
             ],

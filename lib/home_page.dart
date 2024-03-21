@@ -14,7 +14,7 @@ class HomeWidget extends StatefulWidget {
 
 class _HomeWidgetState extends State<HomeWidget> {
   List<Crypto> cryptos = [];
-  double bitcoinPrice = 0.0;
+  double bitcoinPrice = 0;
   double total = 0.0;
   final List<double> preciosCompra = [
     0.005330, //AAVE
@@ -103,6 +103,12 @@ class _HomeWidgetState extends State<HomeWidget> {
   Future<void> _refreshData() async {
     // Simulando una carga de datos asincrónica
     //await Future.delayed(const Duration(seconds: 2));
+   /* ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+      content: Text('Actualizando datos...'),
+      duration: Duration(seconds: 2), // Duración del mensaje emergente
+    ));*/
+          showSnackBar('Actualizando datos...');
+
 
     // Aquí puedes actualizar tus datos, como volver a cargarlos desde una API o una base de datos
     try {
@@ -110,7 +116,7 @@ class _HomeWidgetState extends State<HomeWidget> {
 
       await fetchBitcoinPrice();
     } catch (error) {
-      print('Error: $error');
+      showSnackBar('Error al actualizar los datos.\nEspere unos segundos por favor.');
       //throw Exception('Error al cargar datos desde refresh');
     }
     //setState(() {});
@@ -135,10 +141,18 @@ class _HomeWidgetState extends State<HomeWidget> {
             preciosCompra: preciosCompra,
             cantidades: cantidades,
             bitcoinPrice: bitcoinPrice,
+
             totalValue: total,
           )),
 
       // bottomSheet: TotalValue(total: total),
     );
+  }
+
+  void showSnackBar(String content) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(content),
+      duration: const Duration(seconds: 2), // Duración del mensaje emergente
+    ));
   }
 }
