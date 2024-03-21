@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_portfolio/crypto_item.dart';
 import 'package:my_portfolio/crypto_list.dart';
+import 'package:my_portfolio/total_value.dart';
 import 'dart:convert';
 
 import 'crypto.dart';
@@ -20,15 +21,14 @@ class _HomeWidgetState extends State<HomeWidget> {
   double bitcoinPrice = 0.0;
   double total = 0.0;
   final List<double> preciosCompra = [
-    0.005330,
-    0.0000000000560,
-    0.00001367,
-    //0.00000564, //precio prueba
-    0.0004880,
-    0.00001040,
-    0.0001389,
-    0.0002114,
-    0.00000599
+    0.005330, //AAVE
+    0.0000000000560, //BTT
+    0.00001367, //ADA
+    0.0004880, //FIL
+    0.00001040, //IOTA
+    0.0001389, //CAKE
+    0.0002114, //DOT
+    0.00000599 //GRT
   ];
   // Cantidades privadas
   /*final List<double> cantidades = [
@@ -58,7 +58,6 @@ class _HomeWidgetState extends State<HomeWidget> {
   void initState() {
     super.initState();
     fetchBitcoinPrice();
-
     fetchData();
   }
 
@@ -97,13 +96,6 @@ class _HomeWidgetState extends State<HomeWidget> {
 
       List<Crypto> fetchedBTC =
           data.map((crypto) => Crypto.fromJson(crypto)).toList();
-      /*for (var i = 0; i < fetchedBTC.length; i++) {
-        print("Bitcoin ");
-        print(
-            fetchedBTC[i].symbol.toString() +
-            fetchedBTC[i].price.toString());
-        
-      }*/
 
       setState(() {
         bitcoinPrice = fetchedBTC[0].price;
@@ -125,14 +117,23 @@ class _HomeWidgetState extends State<HomeWidget> {
         backgroundColor: Colors.black87,//.of(context).colorScheme.inversePrimary,
       ),
       body:  
-        Column(
-          children: [
-            CryptoList(cryptos: cryptos, preciosCompra: preciosCompra, cantidades: cantidades, bitcoinPrice: bitcoinPrice),
-          ],
-        ),
+        
+            //istView(
+              ///children: [
+                CryptoList(cryptos: cryptos, preciosCompra: preciosCompra, cantidades: cantidades, bitcoinPrice: bitcoinPrice, totalValue: total,),
+             // ],
+           // ),
+            //Expanded(child: Text('hola')),
+            //Text('hola'),
+
+            //Text('hola')
+
+          
+        
       
 
-      bottomSheet: Text('Total en shitcoins: \$${total.toStringAsFixed(2)}'),
+     // bottomSheet: TotalValue(total: total),
     );
   }
 }
+
