@@ -58,7 +58,6 @@ class _CryptoListState extends State<CryptoList> {
   @override
   void initState() {
     super.initState();
-    total = 0.0;
     fetchBitcoinPrice();
     fetchData();
   }
@@ -66,6 +65,7 @@ class _CryptoListState extends State<CryptoList> {
   Future<void> fetchData() async {
     final response = await http.get(Uri.parse(
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&ids=aave,cardano,bittorrent,pancakeswap-token,polkadot,filecoin,the-graph,iota&order=id_asc'));
+        total=0;
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
