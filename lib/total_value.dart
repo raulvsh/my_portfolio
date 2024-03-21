@@ -13,7 +13,7 @@ class TotalValue extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textStyleFont18 = TextStyle(fontSize: 18);
+    var textStyleFont18 = const TextStyle(fontSize: 16);
     return Padding(
 
       padding: const EdgeInsets.all(20.0),

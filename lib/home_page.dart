@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:my_portfolio/crypto_item.dart';
 import 'package:my_portfolio/crypto_list.dart';
-import 'package:my_portfolio/total_value.dart';
 import 'dart:convert';
 
 import 'crypto.dart';
-
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -64,7 +60,6 @@ class _HomeWidgetState extends State<HomeWidget> {
   Future<void> fetchData() async {
     // final response = await http.get(Uri.parse('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,litecoin'));
     final response = await http.get(Uri.parse(
-
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&ids=aave,cardano,bittorrent,pancakeswap-token,polkadot,filecoin,the-graph,iota&order=id_asc'));
 
     if (response.statusCode == 200) {
@@ -105,6 +100,22 @@ class _HomeWidgetState extends State<HomeWidget> {
     }
   }
 
+  Future<void> _refreshData() async {
+    // Simulando una carga de datos asincrónica
+    //await Future.delayed(const Duration(seconds: 2));
+
+    // Aquí puedes actualizar tus datos, como volver a cargarlos desde una API o una base de datos
+    try {
+      await fetchData();
+
+      await fetchBitcoinPrice();
+    } catch (error) {
+      print('Error: $error');
+      //throw Exception('Error al cargar datos desde refresh');
+    }
+    //setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,26 +125,20 @@ class _HomeWidgetState extends State<HomeWidget> {
           'My portfolio',
           style: TextStyle(color: Colors.white),
         )),
-        backgroundColor: Colors.black87,//.of(context).colorScheme.inversePrimary,
+        backgroundColor:
+            Colors.black87, //.of(context).colorScheme.inversePrimary,
       ),
-      body:  
-        
-            //istView(
-              ///children: [
-                CryptoList(cryptos: cryptos, preciosCompra: preciosCompra, cantidades: cantidades, bitcoinPrice: bitcoinPrice, totalValue: total,),
-             // ],
-           // ),
-            //Expanded(child: Text('hola')),
-            //Text('hola'),
+      body: RefreshIndicator(
+          onRefresh: _refreshData,
+          child: CryptoList(
+            cryptos: cryptos,
+            preciosCompra: preciosCompra,
+            cantidades: cantidades,
+            bitcoinPrice: bitcoinPrice,
+            totalValue: total,
+          )),
 
-            //Text('hola')
-
-          
-        
-      
-
-     // bottomSheet: TotalValue(total: total),
+      // bottomSheet: TotalValue(total: total),
     );
   }
 }
-
