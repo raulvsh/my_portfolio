@@ -8,7 +8,7 @@ import 'package:my_portfolio/total_value.dart';
 import 'crypto.dart';
 
 class CryptoList extends StatefulWidget {
-  CryptoList({
+  const CryptoList({
     super.key,
   });
 
@@ -58,14 +58,19 @@ class _CryptoListState extends State<CryptoList> {
   @override
   void initState() {
     super.initState();
-    fetchBitcoinPrice();
-    fetchData();
+    try {
+      fetchBitcoinPrice();
+      fetchData();
+    } catch (error) {
+      showSnackBar(
+          'Error al obtener los datos.\nEspere unos segundos por favor.');
+    }
   }
 
   Future<void> fetchData() async {
     final response = await http.get(Uri.parse(
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&ids=aave,cardano,bittorrent,pancakeswap-token,polkadot,filecoin,the-graph,iota&order=id_asc'));
-        total=0;
+    double totaltemp = 0.0;
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
@@ -73,11 +78,12 @@ class _CryptoListState extends State<CryptoList> {
       List<Crypto> fetchedCryptos =
           data.map((crypto) => Crypto.fromJson(crypto)).toList();
       for (var i = 0; i < fetchedCryptos.length; i++) {
-        total += fetchedCryptos[i].price * cantidades[i] * bitcoinPrice;
+        totaltemp += fetchedCryptos[i].price * cantidades[i] * bitcoinPrice;
       }
 
       setState(() {
         cryptos = fetchedCryptos;
+        total = totaltemp;
       });
     } else {
       throw Exception('Error al cargar datos');
@@ -119,27 +125,40 @@ class _CryptoListState extends State<CryptoList> {
   Widget build(BuildContext context) {
     return RefreshIndicator(
       onRefresh: _refreshData,
-      child: ListView.builder(
-          itemCount: cryptos.length + 1, // +1 para incluir el bloque adicional
-
-          itemBuilder: (context, index) {
-            double percentage = 0.0;
-            if (index < cryptos.length) {
-              percentage =
-                  (cryptos[index].price / preciosCompra[index] - 1) * 100;
-
-              return CryptoItem(
-                cryptos: cryptos,
-                cantidades: cantidades,
-                bitcoinPrice: bitcoinPrice,
-                percentage: percentage,
-                index: index,
+      child: FutureBuilder(
+          future: fetchData(),
+          builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              // Muestra un indicador de carga mientras espera
+              return const Center(
+                child: CircularProgressIndicator(),
               );
             } else {
-              return TotalValue(
-                total: total,
-                bitcoinPrice: bitcoinPrice,
-              );
+              return ListView.builder(
+                  itemCount:
+                      cryptos.length + 1, // +1 para incluir el bloque adicional
+
+                  itemBuilder: (context, index) {
+                    double percentage = 0.0;
+                    if (index < cryptos.length) {
+                      percentage =
+                          (cryptos[index].price / preciosCompra[index] - 1) *
+                              100;
+
+                      return CryptoItem(
+                        cryptos: cryptos,
+                        cantidades: cantidades,
+                        bitcoinPrice: bitcoinPrice,
+                        percentage: percentage,
+                        index: index,
+                      );
+                    } else {
+                      return TotalValue(
+                        total: total,
+                        bitcoinPrice: bitcoinPrice,
+                      );
+                    }
+                  });
             }
           }),
     );

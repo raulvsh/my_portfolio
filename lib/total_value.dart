@@ -14,7 +14,6 @@ class TotalValue extends StatelessWidget {
   Widget build(BuildContext context) {
     var textStyleFont18 = const TextStyle(fontSize: 16);
     return Padding(
-
       padding: const EdgeInsets.all(20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,7 +27,6 @@ class TotalValue extends StatelessWidget {
                 style: textStyleFont18,
               ),
               Text(
-
                   'Valor en Bitcoin: ${(total / bitcoinPrice).toStringAsFixed(8)}',
                   style: textStyleFont18),
               Text(
