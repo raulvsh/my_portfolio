@@ -23,13 +23,13 @@ class _CryptoListState extends State<CryptoList> {
   double bitcoinPrice = 0;
 
   final List<double> preciosCompra = [
-    0.005330, //AAVE
+    0.00532966, //AAVE
     0.0000000000560, //BTT
     0.00001367, //ADA
-    0.0004880, //FIL
-    0.00001040, //IOTA
-    0.0001389, //CAKE
-    0.0002114, //DOT
+    0.00048788, //FIL
+    0.00000613, //IOTA
+    0.00013568, //CAKE
+    0.00021138, //DOT
     0.00000599 //GRT
   ];
   // Cantidades x10
@@ -45,14 +45,14 @@ class _CryptoListState extends State<CryptoList> {
   ];*/
 
   final List<double> cantidades = [
-    0.598233191,
+    0.598233119,
     100256750.7,
-    110.2235613,
-    14.04226184,
-    164.3548236,
-    16.451689,
+    110.223566669,
+    13.602202548,
+    339.363904604,
+    16.218466904,
     6.862883463,
-    308.8195702,
+    308.819570163,
   ];
 
   @override
