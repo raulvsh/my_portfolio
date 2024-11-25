@@ -1,0 +1,138 @@
+Date : 2024-10-07 19:04:53
+Directory : d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\
+Total : 61 files,  2277 codes, 302 comments, 427 blanks, all 3006 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| C++        |         16 |        531 |        121 |        182 |        834 |
+| XML        |         10 |        465 |         48 |         13 |        526 |
+| CMake      |          7 |        454 |          0 |         89 |        543 |
+| Dart       |          7 |        310 |         25 |         58 |        393 |
+| JSON       |          4 |        248 |          0 |          2 |        250 |
+| Gradle     |          3 |        101 |          5 |         23 |        129 |
+| YAML       |          3 |         59 |         80 |         23 |        162 |
+| Swift      |          6 |         50 |          7 |         20 |         77 |
+| HTML       |          1 |         38 |         16 |          6 |         60 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Properties |          2 |          8 |          0 |          2 |         10 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                   | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                      |         61 |      2,277 |        302 |        427 |      3,006 |
+| . (Files)                                                                                                              |          4 |         69 |         80 |         30 |        179 |
+| android                                                                                                                |         12 |        170 |         51 |         35 |        256 |
+| android (Files)                                                                                                        |          3 |         53 |          0 |         12 |         65 |
+| android\app                                                                                                            |          8 |        112 |         51 |         22 |        185 |
+| android\app (Files)                                                                                                    |          1 |         51 |          5 |         12 |         68 |
+| android\app\src                                                                                                        |          7 |         61 |         46 |         10 |        117 |
+| android\app\src\debug                                                                                                  |          1 |          3 |          4 |          1 |          8 |
+| android\app\src\main                                                                                                   |          5 |         55 |         38 |          8 |        101 |
+| android\app\src\main (Files)                                                                                           |          1 |         29 |          6 |          2 |         37 |
+| android\app\src\main\res                                                                                               |          4 |         26 |         32 |          6 |         64 |
+| android\app\src\main\res\drawable                                                                                      |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                                                  |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                                                        |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\main\res\values-night                                                                                  |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                                                |          1 |          3 |          4 |          1 |          8 |
+| android\gradle                                                                                                         |          1 |          5 |          0 |          1 |          6 |
+| android\gradle\wrapper                                                                                                 |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                                                    |          8 |        229 |          4 |         13 |        246 |
+| ios\Runner                                                                                                             |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner (Files)                                                                                                     |          2 |         13 |          0 |          3 |         16 |
+| ios\RunnerTests                                                                                                        |          1 |          7 |          2 |          4 |         13 |
+| ios\Runner\Assets.xcassets                                                                                             |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                          |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                                        |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                                  |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                                    |          6 |        296 |         15 |         51 |        362 |
+| linux                                                                                                                  |          8 |        309 |         27 |         82 |        418 |
+| linux (Files)                                                                                                          |          4 |        204 |         18 |         55 |        277 |
+| linux\flutter                                                                                                          |          4 |        105 |          9 |         27 |        141 |
+| macos                                                                                                                  |          6 |        442 |          5 |         15 |        462 |
+| macos\Flutter                                                                                                          |          1 |          4 |          3 |          4 |         11 |
+| macos\Runner                                                                                                           |          4 |        431 |          0 |          7 |        438 |
+| macos\Runner (Files)                                                                                                   |          2 |         20 |          0 |          6 |         26 |
+| macos\RunnerTests                                                                                                      |          1 |          7 |          2 |          4 |         13 |
+| macos\Runner\Assets.xcassets                                                                                           |          1 |         68 |          0 |          0 |         68 |
+| macos\Runner\Assets.xcassets\AppIcon.appiconset                                                                        |          1 |         68 |          0 |          0 |         68 |
+| macos\Runner\Base.lproj                                                                                                |          1 |        343 |          0 |          1 |        344 |
+| test                                                                                                                   |          1 |         14 |         10 |          7 |         31 |
+| web                                                                                                                    |          2 |         73 |         16 |          6 |         95 |
+| windows                                                                                                                |         14 |        675 |         94 |        188 |        957 |
+| windows (Files)                                                                                                        |          1 |         89 |          0 |         20 |        109 |
+| windows\flutter                                                                                                        |          4 |        124 |          9 |         29 |        162 |
+| windows\runner                                                                                                         |          9 |        462 |         85 |        139 |        686 |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                               | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\README.md                                                     | Markdown   |         10 |          0 |          7 |         17 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\analysis_options.yaml                                         | YAML       |          3 |         22 |          4 |         29 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\build.gradle                                      | Gradle     |         51 |          5 |         12 |         68 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\debug\AndroidManifest.xml                     | XML        |          3 |          4 |          1 |          8 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\main\AndroidManifest.xml                      | XML        |         29 |          6 |          2 |         37 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\main\res\drawable-v21\launch_background.xml   | XML        |          4 |          7 |          2 |         13 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\main\res\drawable\launch_background.xml       | XML        |          4 |          7 |          2 |         13 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\main\res\values-night\styles.xml              | XML        |          9 |          9 |          1 |         19 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\main\res\values\styles.xml                    | XML        |          9 |          9 |          1 |         19 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\app\src\profile\AndroidManifest.xml                   | XML        |          3 |          4 |          1 |          8 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\build.gradle                                          | Gradle     |         26 |          0 |          5 |         31 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\gradle.properties                                     | Properties |          3 |          0 |          1 |          4 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\gradle\wrapper\gradle-wrapper.properties              | Properties |          5 |          0 |          1 |          6 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\android\settings.gradle                                       | Gradle     |         24 |          0 |          6 |         30 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\flutter_launcher_icons.yaml                                   | YAML       |         19 |          0 |          1 |         20 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\RunnerTests\RunnerTests.swift                             | Swift      |          7 |          2 |          4 |         13 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\AppDelegate.swift                                  | Swift      |         12 |          0 |          2 |         14 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON       |        122 |          0 |          1 |        123 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json | JSON       |         23 |          0 |          1 |         24 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md     | Markdown   |          3 |          0 |          2 |          5 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\Base.lproj\LaunchScreen.storyboard                 | XML        |         36 |          1 |          1 |         38 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\Base.lproj\Main.storyboard                         | XML        |         25 |          1 |          1 |         27 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\ios\Runner\Runner-Bridging-Header.h                           | C++        |          1 |          0 |          1 |          2 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\crypto.dart                                               | Dart       |         17 |          0 |          2 |         19 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\crypto_item.dart                                          | Dart       |         55 |          0 |          7 |         62 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\crypto_list.dart                                          | Dart       |        137 |         13 |         24 |        174 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\home_page.dart                                            | Dart       |         28 |          0 |          5 |         33 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\main.dart                                                 | Dart       |         19 |          2 |          9 |         30 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\total_value.dart                                          | Dart       |         40 |          0 |          4 |         44 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\CMakeLists.txt                                          | CMake      |        118 |          0 |         28 |        146 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\flutter\CMakeLists.txt                                  | CMake      |         79 |          0 |         10 |         89 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\flutter\generated_plugin_registrant.cc                  | C++        |          3 |          4 |          5 |         12 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\flutter\generated_plugin_registrant.h                   | C++        |          5 |          5 |          6 |         16 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\flutter\generated_plugins.cmake                         | CMake      |         18 |          0 |          6 |         24 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\main.cc                                                 | C++        |          5 |          0 |          2 |          7 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\my_application.cc                                       | C++        |         74 |         11 |         20 |        105 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\linux\my_application.h                                        | C++        |          7 |          7 |          5 |         19 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\macos\Flutter\GeneratedPluginRegistrant.swift                 | Swift      |          4 |          3 |          4 |         11 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\macos\RunnerTests\RunnerTests.swift                           | Swift      |          7 |          2 |          4 |         13 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\macos\Runner\AppDelegate.swift                                | Swift      |          8 |          0 |          2 |         10 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json | JSON       |         68 |          0 |          0 |         68 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\macos\Runner\Base.lproj\MainMenu.xib                          | XML        |        343 |          0 |          1 |        344 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\macos\Runner\MainFlutterWindow.swift                          | Swift      |         12 |          0 |          4 |         16 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\pubspec.yaml                                                  | YAML       |         37 |         58 |         18 |        113 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\test\widget_test.dart                                         | Dart       |         14 |         10 |          7 |         31 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\web\index.html                                                | HTML       |         38 |         16 |          6 |         60 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\web\manifest.json                                             | JSON       |         35 |          0 |          0 |         35 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\CMakeLists.txt                                        | CMake      |         89 |          0 |         20 |        109 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\flutter\CMakeLists.txt                                | CMake      |         98 |          0 |         12 |        110 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\flutter\generated_plugin_registrant.cc                | C++        |          3 |          4 |          5 |         12 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\flutter\generated_plugin_registrant.h                 | C++        |          5 |          5 |          6 |         16 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\flutter\generated_plugins.cmake                       | CMake      |         18 |          0 |          6 |         24 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\CMakeLists.txt                                 | CMake      |         34 |          0 |          7 |         41 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\flutter_window.cpp                             | C++        |         49 |          7 |         16 |         72 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\flutter_window.h                               | C++        |         20 |          5 |          9 |         34 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\main.cpp                                       | C++        |         30 |          4 |         10 |         44 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\resource.h                                     | C++        |          9 |          6 |          2 |         17 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\utils.cpp                                      | C++        |         54 |          2 |         10 |         66 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\utils.h                                        | C++        |          8 |          6 |          6 |         20 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\win32_window.cpp                               | C++        |        210 |         24 |         55 |        289 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\windows\runner\win32_window.h                                 | C++        |         48 |         31 |         24 |        103 |
+| Total                                                                                                                  |            |      2,277 |        302 |        427 |      3,006 |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

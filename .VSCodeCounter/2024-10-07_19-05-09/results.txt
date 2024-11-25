@@ -1,0 +1,30 @@
+Date : 2024-10-07 19:05:09
+Directory : d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib
+Total : 6 files,  296 codes, 15 comments, 51 blanks, all 362 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |          6 |        296 |         15 |         51 |        362 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                             |          6 |        296 |         15 |         51 |        362 |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                      | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\crypto.dart      | Dart     |         17 |          0 |          2 |         19 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\crypto_item.dart | Dart     |         55 |          0 |          7 |         62 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\crypto_list.dart | Dart     |        137 |         13 |         24 |        174 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\home_page.dart   | Dart     |         28 |          0 |          5 |         33 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\main.dart        | Dart     |         19 |          2 |          9 |         30 |
+| d:\3-RECURSOS\Recursos programacion\flutter\my_portfolio\lib\total_value.dart | Dart     |         40 |          0 |          4 |         44 |
+| Total                                                                         |          |        296 |         15 |         51 |        362 |
++-------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
