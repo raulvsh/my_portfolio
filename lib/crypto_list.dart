@@ -23,36 +23,22 @@ class _CryptoListState extends State<CryptoList> {
   double bitcoinPrice = 0;
 
   final List<double> preciosCompra = [
-    0.00532966, //AAVE
+    0.00455596, //AAVE
     0.0000000000560, //BTT
-    0.00001187, //ADA
     0.00048788, //FIL
-    0.00000613, //IOTA
-    0.00013568, //CAKE
-    0.000173082, //DOT
-    0.00000599 //GRT
+    0.00006221, //CAKE
+    0.000128052, //DOT
+    0.00000467 //GRT
   ];
-  // Cantidades x10
-  /*final List<double> cantidades = [
-    5.98233191,
-    1002567507,
-    1102.235613,
-    140.4226184,
-    1643.548236,
-    164.51689,
-    68.62883463,
-    3088.195702,
-  ];*/
+
 
   final List<double> cantidades = [
-    0.598233119, //AAVE  
+    0.832206614, //AAVE  
     100256750.7, //BTT
-    139.258503, //ADA
-    14.0422618, //FIL
-    339.363904604, //IOTA
-    16.845789, //CAKE
-    9.42403677, //DOT
-    308.81957, //GRT
+    13.60220255, //FIL
+    57.69571292, //CAKE
+    21.88364233, //DOT
+    557.8822639, //GRT
   ];
 
   @override
@@ -69,7 +55,7 @@ class _CryptoListState extends State<CryptoList> {
 
   Future<void> fetchData() async {
     final response = await http.get(Uri.parse(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&ids=aave,cardano,bittorrent,pancakeswap-token,polkadot,filecoin,the-graph,iota&order=id_asc'));
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=btc&ids=aave,bittorrent,pancakeswap-token,polkadot,filecoin,the-graph&order=id_asc'));
     double totaltemp = 0.0;
 
     if (response.statusCode == 200) {

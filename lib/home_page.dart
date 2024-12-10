@@ -26,7 +26,7 @@ class _HomeWidgetState extends State<HomeWidget> {
         backgroundColor:
             Colors.black87, //.of(context).colorScheme.inversePrimary,
       ),
-      body: CryptoList(),
+      body: const CryptoList(),
     );
   }
 }

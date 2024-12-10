@@ -64,4 +64,7 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'  // Actualiza si es necesario
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.1'  // Verifica la versión compatible
+}
