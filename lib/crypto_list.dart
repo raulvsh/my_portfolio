@@ -28,7 +28,7 @@ class _CryptoListState extends State<CryptoList> {
     0.00048788, //FIL
     0.00006221, //CAKE
     0.000128052, //DOT
-    0.00000467 //GRT
+    0.00000421, //GRT
   ];
 
 
@@ -38,7 +38,7 @@ class _CryptoListState extends State<CryptoList> {
     13.60220255, //FIL
     57.69571292, //CAKE
     21.88364233, //DOT
-    557.8822639, //GRT
+    677.8657591, //GRT
   ];
 
   @override

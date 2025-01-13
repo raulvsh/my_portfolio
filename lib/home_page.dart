@@ -5,10 +5,10 @@ class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
 
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
+  HomeWidgetState createState() => HomeWidgetState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class HomeWidgetState extends State<HomeWidget> {
   @override
   void initState() {
     super.initState();
